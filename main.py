@@ -9,6 +9,15 @@ def copy(seed):
         s.write(str(seed))
         print('Check seed.txt for your seed')
 
+def loading_bar(duration=5, bar_length=20):
+    for i in range(bar_length + 1):
+        percent = int((i / bar_length) * 100)
+        bar = '=' * i + '>' + ' ' * (bar_length - i)
+        sys.stdout.write(f'\r{percent:3}% [{bar}]')
+        sys.stdout.flush()
+        time.sleep(duration / bar_length)
+    print()  # Move to the next line after done
+
 def clear():
     os.system('clear')
 
@@ -37,10 +46,7 @@ def get_int(prompt):
             random_gen()
         elif i == "update":
             clear()
-            for _ in range(3):
-                for dots in ["   ", ".  ", ".. ", "..."]:
-                    sys.stdout.write(f'Updating{dots}\r')
-                    time.sleep(0.5)
+            loading_bar(duration=10, bar_length=50)
             os.system('git restore * && git pull')
             for _ in range(3):
                 for dots in ["   ", ".  ", ".. ", "..."]:
