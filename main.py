@@ -42,7 +42,7 @@ def get_int(prompt):
             with open('noncode/UpdateLog.txt', 'r') as f:
                 print(f.read())
             print(f'Current version: {version}')
-            print('For more, check out https://github.com/randomdude79/Random-Number-Generator')
+            print('For more, check out https://github.com/randomdude79/RNG-Lite')
             random_gen()
         elif i == "update":
             clear()
