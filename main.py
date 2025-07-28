@@ -48,12 +48,13 @@ def get_int(prompt):
             clear()
             loading_bar(duration=10, bar_length=50)
             os.system('git restore * && git pull')
+            clear()
             for _ in range(3):
                 for dots in ["   ", ".  ", ".. ", "..."]:
                     sys.stdout.write(f'Restarting{dots}\r')
                     time.sleep(0.5)
             clear()
-            print(f'Version: {version}')
+            print(f"You're now up to date with version: {version}")
             os.system('python main.py')
         elif i == "exit":
             exit_program()
