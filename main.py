@@ -49,6 +49,9 @@ def get_int(prompt):
             loading_bar(duration=10, bar_length=50)
             os.system('git restore * && git pull')
             clear()
+            print('Done with downloading updates!')
+            for i in range(3):
+                print(f'Restarting in {3-i} seconds...')
             for _ in range(3):
                 for dots in ["   ", ".  ", ".. ", "..."]:
                     sys.stdout.write(f'Restarting{dots}\r')
