@@ -1,0 +1,21 @@
+Updates
+
+Scheduled:  
+1.15 Final release Dec 31st, 2025  
+
+Past:  
+1.12.X Bug fixes and lightweight updates  
+1.11.X Seed import updates  
+1.10.X Finalizing release  
+1.9.X Update script  
+1.8.X Seed Database  
+1.7.X Seeds  
+1.6.X Adding update script  
+1.6.0 Feedback profanity  
+1.5.X Seed function  
+1.4.X Feedback function
+1.3.4 C Easter Eggs removed  
+v1.3.X User-friendly fixes and Easter Eggs added  
+v1.2.0 Addition to v1.1  Feb 4th, 2024  
+v1.1.0 Added function restart and integer waiting Feb 3rd, 2024  
+v1.0.0 First release Jan 7th, 2024  
