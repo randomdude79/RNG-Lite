@@ -46,7 +46,7 @@ def get_int(prompt):
             random_gen()
         elif i == "update":
             clear()
-            loading_bar(duration=10, bar_length=50)
+            loading_bar(duration=10, bar_length=20)
             os.system('git restore * && git pull')
             clear()
             for _ in range(3):
