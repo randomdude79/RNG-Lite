@@ -5,7 +5,7 @@ seed = []
 numbersList = []
 
 def copy(seed):
-    with open('seed.txt', 'w') as s:
+    with open('noncode/seed.txt', 'w') as s:
         s.write(str(seed))
         print('Check seed.txt for your seed')
 
