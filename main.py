@@ -1,6 +1,6 @@
 import statistics, random, time, os, sys
 
-version = "1.12.3"
+version = "1.0.10"
 seed = []
 numbersList = []
 
@@ -16,7 +16,7 @@ def loading_bar(duration=5, bar_length=20):
         sys.stdout.write(f'\r{percent:3}% [{bar}]')
         sys.stdout.flush()
         time.sleep(duration / bar_length)
-    print()  # Move to the next line after done
+    print()
 
 def clear():
     os.system('clear')
