@@ -72,7 +72,6 @@ def random_gen():
     else:
         seed = int(''.join(str(random.randint(0, 9)) for _ in range(20)))
     random.seed(seed)
-
     number1 = get_int('Choose your first number.\n')
     print()
     number2 = get_int('Choose your second number.\n')
