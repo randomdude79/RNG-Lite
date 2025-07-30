@@ -1,8 +1,9 @@
 import statistics, random, time, os, sys
 
-version = "1.0.10"
+version = "1.0.11.1"
 seed = []
 numbersList = []
+
 
 def copy(seed):
     with open('noncode/seed.txt', 'w') as s:
@@ -18,7 +19,7 @@ def loading_bar(duration=5, bar_length=20):
         percent = int((i / bar_length) * 100)
         completed = RED + '-' * i + RESET
         remaining = GREY + '-' * (bar_length - i) + RESET
-        sys.stdout.write(f'\r{percent:3}% [{completed}>{remaining}]')
+        sys.stdout.write(f'\r{percent:3}% [{completed}{remaining}]')
         sys.stdout.flush()
         time.sleep(duration / bar_length)
     print()
@@ -67,6 +68,8 @@ def get_int(prompt):
             return int(i)
         else:
             print(f'"{i}" is not an integer. Please enter an integer.\n')
+
+loading_bar(duration=5, bar_length=50)
 
 def random_gen():
     global seed, numbersList
