@@ -1,6 +1,6 @@
 import statistics, random, time, os, sys
 
-version = "1.1.3"
+version = "1.1.4"
 seed = []
 numbersList = []
 
@@ -46,7 +46,7 @@ def get_int(prompt):
         else:
             print(f'"{i}" is not an integer. Please enter an integer.\n')
 
-loading_bar(duration=10, bar_length=20)
+loading_bar(duration=10, bar_length=50)
 os.system('git restore * && git pull')
 clear()
 print(f"Running on version: {version}\n Check out the Github page here: https://github.com/randomdude79/RNG-Lite\nType 'exit' to exit the program")
