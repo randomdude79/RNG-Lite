@@ -1,6 +1,6 @@
 import statistics, random, time, os, sys
 
-version = "1.0.11.1"
+version = "1.1.2"
 seed = []
 numbersList = []
 
@@ -40,28 +40,6 @@ def get_int(prompt):
         if i == "-0":
             print('-0 is not an integer. Please try again.\n')
             continue
-        if i == "clear":
-            clear()
-            print('Console cleared!\n')
-            random_gen()
-        elif i == "updates":
-            with open('noncode/UpdateLog.txt', 'r') as f:
-                print(f.read())
-            print(f'Current version: {version}')
-            print('For more, check out https://github.com/randomdude79/RNG-Lite')
-            random_gen()
-        elif i == "update":
-            clear()
-            loading_bar(duration=10, bar_length=20)
-            os.system('git restore * && git pull')
-            clear()
-            for _ in range(3):
-                for dots in ["   ", ".  ", ".. ", "..."]:
-                    sys.stdout.write(f'Restarting{dots}\r')
-                    time.sleep(0.5)
-            clear()
-            print(f"You're now up to date with version: {version}")
-            os.system('python main.py')
         elif i == "exit":
             exit_program()
         elif is_an_integer(i):
@@ -69,7 +47,11 @@ def get_int(prompt):
         else:
             print(f'"{i}" is not an integer. Please enter an integer.\n')
 
-loading_bar(duration=5, bar_length=50)
+loading_bar(duration=10, bar_length=20)
+os.system('git restore * && git pull')
+clear()
+print(f"Running on version: {version}\n Check out the Github page here: https://github.com/randomdude79/RNG-Lite")
+print('Type "exit" to exit the program.\n')
 
 def random_gen():
     global seed, numbersList
