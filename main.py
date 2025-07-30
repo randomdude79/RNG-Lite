@@ -1,9 +1,8 @@
 import statistics, random, time, os, sys
 
-version = "1.1.2"
+version = "1.1.3"
 seed = []
 numbersList = []
-
 
 def copy(seed):
     with open('noncode/seed.txt', 'w') as s:
@@ -50,8 +49,7 @@ def get_int(prompt):
 loading_bar(duration=10, bar_length=20)
 os.system('git restore * && git pull')
 clear()
-print(f"Running on version: {version}\n Check out the Github page here: https://github.com/randomdude79/RNG-Lite")
-print('Type "exit" to exit the program.\n')
+print(f"Running on version: {version}\n Check out the Github page here: https://github.com/randomdude79/RNG-Lite\nType 'exit' to exit the program")
 
 def random_gen():
     global seed, numbersList
