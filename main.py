@@ -54,8 +54,11 @@ print(f"Running on version: {version}\n Check out the Github page here: https://
 def random_gen():
     global seed, numbersList
     numbersList = []
-    if input('Would you like to use a seed?\n').lower() == 'yes':
+    seedq = input('Would you like to use a seed?\n').lower()
+    if seedq == 'yes':
         seed = int(input('Enter a seed:\n'))
+    if seedq == 'exit':
+        exit_program()
     else:
         seed = int(''.join(str(random.randint(0, 9)) for _ in range(20)))
     random.seed(seed)

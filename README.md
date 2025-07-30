@@ -8,7 +8,6 @@ This Python program generates random numbers based on user input. It allows user
 - Generates random numbers within a specified range.
 - Supports the use of a seed for deterministic results.
 - Handles user input validation to ensure that only integers are accepted.
-- Detects and filters profanity in user email and feedback inputs.
 
 ## Getting Started
 
